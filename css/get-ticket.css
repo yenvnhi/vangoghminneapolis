@@ -1,0 +1,100 @@
+/* General Styles */
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	color: white;
+	background: linear-gradient(45deg, #1e3a8a, #2563eb, #facc15, #fde047);
+	background-size: 400% 400%;
+	animation: gradientAnimation 10s infinite;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	text-align: center;
+}
+
+
+
+/* Navigation Bar */
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: black;
+	padding: 15px;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	z-index: 1000;
+}
+
+.navbar a {
+	text-decoration: none;
+	color: lightgray;
+	font-size: 16px;
+}
+
+.navbar a.active {
+	color: skyblue;
+	font-weight: bold;
+}
+
+.navbar a:hover {
+	color: skyblue;
+}
+
+/* Ticket Section */
+.ticket-container {
+	background: rgba(0, 0, 0, 0.7);
+	padding: 40px;
+	border-radius: 15px;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+	animation: fadeIn 2s ease;
+}
+
+.ticket-container h1 {
+	font-size: 3rem;
+	color: #fde047;
+	margin-bottom: 15px;
+}
+
+.ticket-container p {
+	font-size: 1.2rem;
+	margin-bottom: 20px;
+	color: #ffffff;
+}
+
+/* Button */
+#book-button {
+	background-color: #fde047;
+	color: #1e3a8a;
+	border: none;
+	padding: 15px 30px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 40px;
+	transition: all 0.3s ease;
+}
+
+#book-button:hover {
+	background-color: #2563eb;
+	color: white;
+	transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes gradientAnimation {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; transform: translateY(-20px); }
+	to { opacity: 1; transform: translateY(0); }
+}
